@@ -395,7 +395,9 @@ var script = {
         onArrowDownKey(event) {
             const optionIndex = this.focusedOptionIndex !== -1 ? this.findNextOptionIndex(this.focusedOptionIndex) : this.findFirstFocusedOptionIndex();
 
-            console.log('uhmmm okay 2222');
+            console.log('keydown');
+            console.log(optionIndex)
+            console.log(this.focusedOptionIndex)
             this.changeFocusedOptionIndex(event, optionIndex);
 
             !this.overlayVisible && this.show();
@@ -658,10 +660,11 @@ var script = {
             return matched;
         },
         changeFocusedOptionIndex(event, index) {
+
             if (this.focusedOptionIndex !== index) {
+                console.log('inside')
                 this.focusedOptionIndex = index;
                 this.scrollInView();
-
                 if (this.selectOnFocus) {
                     this.updateModel(event, this.getOptionValue(this.visibleOptions[index]));
                 }
