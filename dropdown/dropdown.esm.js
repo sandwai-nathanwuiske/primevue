@@ -114,7 +114,7 @@ var script = {
         return {
             id: UniqueComponentId(),
             focused: false,
-            focusedOptionIndex: 1,
+            focusedOptionIndex: -1,
             filterValue: null,
             overlayVisible: false
         }
@@ -395,9 +395,6 @@ var script = {
         onArrowDownKey(event) {
             const optionIndex = this.focusedOptionIndex !== -1 ? this.findNextOptionIndex(this.focusedOptionIndex) : this.findFirstFocusedOptionIndex();
 
-            console.log('keydown');
-            console.log(optionIndex)
-            console.log(this.focusedOptionIndex)
             this.changeFocusedOptionIndex(event, optionIndex);
 
             !this.overlayVisible && this.show();
@@ -666,7 +663,6 @@ var script = {
         changeFocusedOptionIndex(event, index) {
 
             if (this.focusedOptionIndex !== index) {
-                console.log('inside')
                 this.focusedOptionIndex = index;
                 this.scrollInView();
                 if (this.selectOnFocus) {
@@ -906,7 +902,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                     value: $props.modelValue,
                     placeholder: $props.placeholder
                 }, () => [
-                    createTextVNode(toDisplayString($options.label === 'p-emptylabel' ? ' ' : $options.label || 'empty'), 1)
+                    createTextVNode(toDisplayString($options.label === 'p-emptylabel' ? ' ' : $options.label || 'empty'), 1)
                 ])
             ], 16, _hoisted_3)),
         ($props.showClear && $props.modelValue != null)
