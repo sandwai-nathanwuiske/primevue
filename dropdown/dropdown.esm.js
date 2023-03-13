@@ -508,6 +508,10 @@ var script = {
             this.scrollInView();
         },
         onOverlayAfterEnter() {
+            if (this.filter) {
+                this.$refs.filterInput.focus();
+            }
+
             this.bindOutsideClickListener();
             this.bindScrollListener();
             this.bindResizeListener();
