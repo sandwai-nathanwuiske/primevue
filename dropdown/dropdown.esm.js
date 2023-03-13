@@ -114,7 +114,7 @@ var script = {
         return {
             id: UniqueComponentId(),
             focused: false,
-            focusedOptionIndex: -1,
+            focusedOptionIndex: 1,
             filterValue: null,
             overlayVisible: false
         }
