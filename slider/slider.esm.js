@@ -436,7 +436,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.p-slider {\n\tposition: relative;\n}\n.p-slider .p-slider-handle {\n\tposition: absolute;\n\tcursor: grab;\n    touch-action: none;\n    display: block;\n}\n.p-slider-range {\n\tposition: absolute;\n    display: block;\n}\n.p-slider-horizontal .p-slider-range {\n    top: 0;\n    left: 0;\n\theight: 100%;\n}\n.p-slider-horizontal .p-slider-handle {\n    top: 50%;\n}\n.p-slider-vertical {\n\theight: 100px;\n}\n.p-slider-vertical .p-slider-handle {\n    left: 50%;\n}\n.p-slider-vertical .p-slider-range {\n    bottom: 0;\n    left: 0;\n    width: 100%;\n}\n";
+var css_248z = "\n.p-slider {\n\tposition: relative;\n}\n.p-slider .p-slider-handle {\n\tposition: absolute;\n\tcursor: -webkit-grab;\n\tcursor: grab;\n    -ms-touch-action: none;\n        touch-action: none;\n    display: block;\n}\n.p-slider-range {\n\tposition: absolute;\n    display: block;\n}\n.p-slider-horizontal .p-slider-range {\n    top: 0;\n    left: 0;\n\theight: 100%;\n}\n.p-slider-horizontal .p-slider-handle {\n    top: 50%;\n}\n.p-slider-vertical {\n\theight: 100px;\n}\n.p-slider-vertical .p-slider-handle {\n    left: 50%;\n}\n.p-slider-vertical .p-slider-range {\n    bottom: 0;\n    left: 0;\n    width: 100%;\n}\n";
 styleInject(css_248z);
 
 script.render = render;

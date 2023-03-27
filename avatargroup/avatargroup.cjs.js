@@ -41,7 +41,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.p-avatar-group .p-avatar + .p-avatar {\n    margin-left: -1rem;\n}\n.p-avatar-group {\n    display: flex;\n    align-items: center;\n}\n";
+var css_248z = "\n.p-avatar-group .p-avatar + .p-avatar {\n    margin-left: -1rem;\n}\n.p-avatar-group {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n";
 styleInject(css_248z);
 
 script.render = render;

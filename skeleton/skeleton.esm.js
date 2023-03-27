@@ -78,7 +78,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.p-skeleton {\n    position: relative;\n    overflow: hidden;\n}\n.p-skeleton::after {\n    content: \"\";\n    animation: p-skeleton-animation 1.2s infinite;\n    height: 100%;\n    left: 0;\n    position: absolute;\n    right: 0;\n    top: 0;\n    transform: translateX(-100%);\n    z-index: 1;\n}\n.p-skeleton.p-skeleton-circle {\n    border-radius: 50%;\n}\n.p-skeleton-none::after {\n   animation: none;\n}\n@keyframes p-skeleton-animation {\nfrom {\n        transform: translateX(-100%);\n}\nto {\n        transform: translateX(100%);\n}\n}\n";
+var css_248z = "\n.p-skeleton {\n    position: relative;\n    overflow: hidden;\n}\n.p-skeleton::after {\n    content: \"\";\n    -webkit-animation: p-skeleton-animation 1.2s infinite;\n            animation: p-skeleton-animation 1.2s infinite;\n    height: 100%;\n    left: 0;\n    position: absolute;\n    right: 0;\n    top: 0;\n    -webkit-transform: translateX(-100%);\n            transform: translateX(-100%);\n    z-index: 1;\n}\n.p-skeleton.p-skeleton-circle {\n    border-radius: 50%;\n}\n.p-skeleton-none::after {\n   -webkit-animation: none;\n           animation: none;\n}\n@-webkit-keyframes p-skeleton-animation {\nfrom {\n        -webkit-transform: translateX(-100%);\n                transform: translateX(-100%);\n}\nto {\n        -webkit-transform: translateX(100%);\n                transform: translateX(100%);\n}\n}\n@keyframes p-skeleton-animation {\nfrom {\n        -webkit-transform: translateX(-100%);\n                transform: translateX(-100%);\n}\nto {\n        -webkit-transform: translateX(100%);\n                transform: translateX(100%);\n}\n}\n";
 styleInject(css_248z);
 
 script.render = render;

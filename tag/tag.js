@@ -69,7 +69,7 @@ this.primevue.tag = (function (vue) {
       }
     }
 
-    var css_248z = "\n.p-tag {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n}\n.p-tag-icon,\n.p-tag-value,\n.p-tag-icon.pi {\n    line-height: 1.5;\n}\n.p-tag.p-tag-rounded {\n    border-radius: 10rem;\n}\n";
+    var css_248z = "\n.p-tag {\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.p-tag-icon,\n.p-tag-value,\n.p-tag-icon.pi {\n    line-height: 1.5;\n}\n.p-tag.p-tag-rounded {\n    border-radius: 10rem;\n}\n";
     styleInject(css_248z);
 
     script.render = render;

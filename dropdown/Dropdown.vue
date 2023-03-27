@@ -202,8 +202,6 @@ export default {
         }
     },
     mounted() {
-
-        console.log('dropdown test!');
         this.id = this.$attrs.id || this.id;
 
         this.autoUpdateModel();
@@ -587,6 +585,10 @@ export default {
             this.scrollInView();
         },
         onOverlayAfterEnter() {
+            if (this.filter) {
+                this.$refs.filterInput.focus();
+            }
+            
             this.bindOutsideClickListener();
             this.bindScrollListener();
             this.bindResizeListener();

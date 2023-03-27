@@ -158,7 +158,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.p-scrolltop {\n    position: fixed;\n    bottom: 20px;\n    right: 20px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.p-scrolltop-sticky {\n    position: sticky;\n}\n.p-scrolltop-sticky.p-link {\n    margin-left: auto;\n}\n.p-scrolltop-enter-from {\n    opacity: 0;\n}\n.p-scrolltop-enter-active {\n    transition: opacity .15s;\n}\n.p-scrolltop.p-scrolltop-leave-to {\n    opacity: 0;\n}\n.p-scrolltop-leave-active {\n    transition: opacity .15s;\n}\n";
+var css_248z = "\n.p-scrolltop {\n    position: fixed;\n    bottom: 20px;\n    right: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.p-scrolltop-sticky {\n    position: sticky;\n}\n.p-scrolltop-sticky.p-link {\n    margin-left: auto;\n}\n.p-scrolltop-enter-from {\n    opacity: 0;\n}\n.p-scrolltop-enter-active {\n    -webkit-transition: opacity .15s;\n    transition: opacity .15s;\n}\n.p-scrolltop.p-scrolltop-leave-to {\n    opacity: 0;\n}\n.p-scrolltop-leave-active {\n    -webkit-transition: opacity .15s;\n    transition: opacity .15s;\n}\n";
 styleInject(css_248z);
 
 script.render = render;

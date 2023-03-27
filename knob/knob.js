@@ -341,7 +341,7 @@ this.primevue.knob = (function (vue) {
       }
     }
 
-    var css_248z = "\n@keyframes dash-frame {\n100% {\n        stroke-dashoffset: 0;\n}\n}\n.p-knob-range {\n    fill: none;\n    transition: stroke .1s ease-in;\n}\n.p-knob-value {\n    animation-name: dash-frame;\n    animation-fill-mode: forwards;\n    fill: none;\n}\n.p-knob-text {\n    font-size: 1.3rem;\n    text-align: center;\n}\n";
+    var css_248z = "\n@-webkit-keyframes dash-frame {\n100% {\n        stroke-dashoffset: 0;\n}\n}\n@keyframes dash-frame {\n100% {\n        stroke-dashoffset: 0;\n}\n}\n.p-knob-range {\n    fill: none;\n    -webkit-transition: stroke .1s ease-in;\n    transition: stroke .1s ease-in;\n}\n.p-knob-value {\n    -webkit-animation-name: dash-frame;\n            animation-name: dash-frame;\n    -webkit-animation-fill-mode: forwards;\n            animation-fill-mode: forwards;\n    fill: none;\n}\n.p-knob-text {\n    font-size: 1.3rem;\n    text-align: center;\n}\n";
     styleInject(css_248z);
 
     script.render = render;

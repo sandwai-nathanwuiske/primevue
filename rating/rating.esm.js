@@ -188,7 +188,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.p-rating-icon {\n    cursor: pointer;\n}\n.p-rating.p-rating-readonly .p-rating-icon {\n    cursor: default;\n}\n.p-rating:not(.p-disabled) .p-rating-icon.p-focus {\n    outline: 0 none;\n    outline-offset: 0;\n    box-shadow: 0 0 0 0.2rem #BFDBFE;\n    border-color: #3B82F6;\n}\n";
+var css_248z = "\n.p-rating-icon {\n    cursor: pointer;\n}\n.p-rating.p-rating-readonly .p-rating-icon {\n    cursor: default;\n}\n.p-rating:not(.p-disabled) .p-rating-icon.p-focus {\n    outline: 0 none;\n    outline-offset: 0;\n    -webkit-box-shadow: 0 0 0 0.2rem #BFDBFE;\n            box-shadow: 0 0 0 0.2rem #BFDBFE;\n    border-color: #3B82F6;\n}\n";
 styleInject(css_248z);
 
 script.render = render;

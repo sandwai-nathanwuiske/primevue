@@ -218,7 +218,7 @@ this.primevue.accordion = (function (utils, vue) {
       }
     }
 
-    var css_248z = "\n.p-accordion-header-link {\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n            user-select: none;\n    position: relative;\n    text-decoration: none;\n}\n.p-accordion-header-link:focus {\n    z-index: 1;\n}\n.p-accordion-header-text {\n    line-height: 1;\n}\n";
+    var css_248z = "\n.p-accordion-header-link {\n    cursor: pointer;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    position: relative;\n    text-decoration: none;\n}\n.p-accordion-header-link:focus {\n    z-index: 1;\n}\n.p-accordion-header-text {\n    line-height: 1;\n}\n";
     styleInject(css_248z);
 
     script.render = render;
