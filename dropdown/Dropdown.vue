@@ -260,7 +260,7 @@ export default {
             this.overlayVisible = true;
             this.focusedOptionIndex = this.focusedOptionIndex !== -1 ? this.focusedOptionIndex : (this.autoOptionFocus ? this.findFirstFocusedOptionIndex() : -1);
 
-            isFocus && this.$refs.focusInput.focus();
+            isFocus && this.$refs.focusInput?.focus();
         },
         hide(isFocus) {
             const _hide = () => {
@@ -269,7 +269,7 @@ export default {
                 this.focusedOptionIndex = -1;
                 this.searchValue = '';
 
-                isFocus && this.$refs.focusInput.focus();
+                isFocus && this.$refs.focusInput?.focus();
             }
 
             setTimeout(() => { _hide() }, 0); // For ScreenReaders
@@ -380,14 +380,14 @@ export default {
 
             if (relatedTarget === this.$refs.focusInput) {
                 const firstFocusableEl = DomHandler.getFirstFocusableElement(this.overlay, ':not(.p-hidden-focusable)');
-                firstFocusableEl && firstFocusableEl.focus();
+                firstFocusableEl && firstFocusableEl?.focus();
             }
             else {
-                this.$refs.focusInput.focus();
+                this.$refs.focusInput?.focus();
             }
         },
         onLastHiddenFocus() {
-            this.$refs.firstHiddenFocusableElementOnOverlay.focus();
+            this.$refs.firstHiddenFocusableElementOnOverlay?.focus();
         },
         onOptionSelect(event, option) {
             const value = this.getOptionValue(option);
@@ -561,7 +561,7 @@ export default {
         onTabKey(event, pressedInInputText = false) {
             if (!pressedInInputText) {
                 if (this.overlayVisible && this.hasFocusableElements()) {
-                    this.$refs.firstHiddenFocusableElementOnOverlay.focus();
+                    this.$refs.firstHiddenFocusableElementOnOverlay?.focus();
 
                     event.preventDefault();
                 }
@@ -586,7 +586,7 @@ export default {
         },
         onOverlayAfterEnter() {
             if (this.filter) {
-                this.$refs.filterInput.focus();
+                this.$refs.filterInput?.focus();
             }
             
             this.bindOutsideClickListener();

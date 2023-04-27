@@ -189,7 +189,7 @@ this.primevue.dropdown = (function (utils, OverlayEventBus, api, Ripple, Virtual
                 this.overlayVisible = true;
                 this.focusedOptionIndex = this.focusedOptionIndex !== -1 ? this.focusedOptionIndex : (this.autoOptionFocus ? this.findFirstFocusedOptionIndex() : -1);
 
-                isFocus && this.$refs.focusInput.focus();
+                isFocus && this.$refs.focusInput?.focus();
             },
             hide(isFocus) {
                 const _hide = () => {
@@ -198,7 +198,7 @@ this.primevue.dropdown = (function (utils, OverlayEventBus, api, Ripple, Virtual
                     this.focusedOptionIndex = -1;
                     this.searchValue = '';
 
-                    isFocus && this.$refs.focusInput.focus();
+                    isFocus && this.$refs.focusInput?.focus();
                 };
 
                 setTimeout(() => { _hide(); }, 0); // For ScreenReaders
@@ -309,14 +309,14 @@ this.primevue.dropdown = (function (utils, OverlayEventBus, api, Ripple, Virtual
 
                 if (relatedTarget === this.$refs.focusInput) {
                     const firstFocusableEl = utils.DomHandler.getFirstFocusableElement(this.overlay, ':not(.p-hidden-focusable)');
-                    firstFocusableEl && firstFocusableEl.focus();
+                    firstFocusableEl && firstFocusableEl?.focus();
                 }
                 else {
-                    this.$refs.focusInput.focus();
+                    this.$refs.focusInput?.focus();
                 }
             },
             onLastHiddenFocus() {
-                this.$refs.firstHiddenFocusableElementOnOverlay.focus();
+                this.$refs.firstHiddenFocusableElementOnOverlay?.focus();
             },
             onOptionSelect(event, option) {
                 const value = this.getOptionValue(option);
@@ -484,7 +484,7 @@ this.primevue.dropdown = (function (utils, OverlayEventBus, api, Ripple, Virtual
             onTabKey(event, pressedInInputText = false) {
                 if (!pressedInInputText) {
                     if (this.overlayVisible && this.hasFocusableElements()) {
-                        this.$refs.firstHiddenFocusableElementOnOverlay.focus();
+                        this.$refs.firstHiddenFocusableElementOnOverlay?.focus();
 
                         event.preventDefault();
                     }
@@ -509,7 +509,7 @@ this.primevue.dropdown = (function (utils, OverlayEventBus, api, Ripple, Virtual
             },
             onOverlayAfterEnter() {
                 if (this.filter) {
-                    this.$refs.filterInput.focus();
+                    this.$refs.filterInput?.focus();
                 }
                 
                 this.bindOutsideClickListener();
@@ -1121,7 +1121,7 @@ this.primevue.dropdown = (function (utils, OverlayEventBus, api, Ripple, Virtual
       }
     }
 
-    var css_248z = "\n.p-dropdown {\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    cursor: pointer;\n    position: relative;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n.p-dropdown-clear-icon {\n    position: absolute;\n    top: 50%;\n    margin-top: -.5rem;\n}\n.p-dropdown-trigger {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n.p-dropdown-label {\n    display: block;\n    white-space: nowrap;\n    overflow: hidden;\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto;\n    width: 1%;\n    text-overflow: ellipsis;\n    cursor: pointer;\n}\n.p-dropdown-label-empty {\n    overflow: hidden;\n    opacity: 0;\n}\ninput.p-dropdown-label  {\n    cursor: default;\n}\n.p-dropdown .p-dropdown-panel {\n    min-width: 100%;\n}\n.p-dropdown-panel {\n    position: absolute;\n    top: 0;\n    left: 0;\n}\n.p-dropdown-items-wrapper {\n    overflow: auto;\n}\n.p-dropdown-item {\n    cursor: pointer;\n    font-weight: normal;\n    white-space: nowrap;\n    position: relative;\n    overflow: hidden;\n}\n.p-dropdown-item-group {\n    cursor: auto;\n}\n.p-dropdown-items {\n    margin: 0;\n    padding: 0;\n    list-style-type: none;\n}\n.p-dropdown-filter {\n    width: 100%;\n}\n.p-dropdown-filter-container {\n    position: relative;\n}\n.p-dropdown-filter-icon {\n    position: absolute;\n    top: 50%;\n    margin-top: -.5rem;\n}\n.p-fluid .p-dropdown {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.p-fluid .p-dropdown .p-dropdown-label {\n    width: 1%;\n}\n";
+    var css_248z = "\n.p-dropdown {\r\n    display: -webkit-inline-box;\r\n    display: -ms-inline-flexbox;\r\n    display: inline-flex;\r\n    cursor: pointer;\r\n    position: relative;\r\n    -webkit-user-select: none;\r\n       -moz-user-select: none;\r\n        -ms-user-select: none;\r\n            user-select: none;\n}\n.p-dropdown-clear-icon {\r\n    position: absolute;\r\n    top: 50%;\r\n    margin-top: -.5rem;\n}\n.p-dropdown-trigger {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    -ms-flex-negative: 0;\r\n        flex-shrink: 0;\n}\n.p-dropdown-label {\r\n    display: block;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1 1 auto;\r\n            flex: 1 1 auto;\r\n    width: 1%;\r\n    text-overflow: ellipsis;\r\n    cursor: pointer;\n}\n.p-dropdown-label-empty {\r\n    overflow: hidden;\r\n    opacity: 0;\n}\ninput.p-dropdown-label  {\r\n    cursor: default;\n}\n.p-dropdown .p-dropdown-panel {\r\n    min-width: 100%;\n}\n.p-dropdown-panel {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\n}\n.p-dropdown-items-wrapper {\r\n    overflow: auto;\n}\n.p-dropdown-item {\r\n    cursor: pointer;\r\n    font-weight: normal;\r\n    white-space: nowrap;\r\n    position: relative;\r\n    overflow: hidden;\n}\n.p-dropdown-item-group {\r\n    cursor: auto;\n}\n.p-dropdown-items {\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style-type: none;\n}\n.p-dropdown-filter {\r\n    width: 100%;\n}\n.p-dropdown-filter-container {\r\n    position: relative;\n}\n.p-dropdown-filter-icon {\r\n    position: absolute;\r\n    top: 50%;\r\n    margin-top: -.5rem;\n}\n.p-fluid .p-dropdown {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\n}\n.p-fluid .p-dropdown .p-dropdown-label {\r\n    width: 1%;\n}\r\n";
     styleInject(css_248z);
 
     script.render = render;
